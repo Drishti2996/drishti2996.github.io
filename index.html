@@ -1,92 +1,98 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-	<title></title>
-	<meta name="generator" content="LibreOffice 24.2.5.2 (Linux)"/>
-	<meta name="created" content="2024-10-03T22:16:41.791536926"/>
-	<meta name="changed" content="2024-10-03T22:17:17.037602161"/>
-	<style type="text/css">
-		@page { size: 21.59cm 27.94cm; margin: 2cm }
-		p { line-height: 115%; margin-bottom: 0.25cm; background: transparent }
-	</style>
+  <title>Create New Product</title>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <style> 
+    .banner-poc{
+		height:200px;
+		align-content: center;
+		background-position: top;
+		background-size: cover;
+
+    } 
+    .background-poc{
+    		background-size: 180%;
+
+    }
+    .big-bold-heading {
+		font-size: 56px; /* Adjust font size as needed */
+	        font-weight: bold;
+		text-align: center; /* Optional: Center the heading */
+		
+}
+    </style>
+    
+<!--     background-image:{url("image url")} -->
 </head>
-<body lang="en-CA" link="#000080" vlink="#800000" dir="ltr"><p style="line-height: 100%; margin-bottom: 0cm">
-&lt;!DOCTYPE html&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">&lt;html lang=&quot;en&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">&lt;head&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;meta
-charset=&quot;UTF-8&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;meta
-name=&quot;viewport&quot; content=&quot;width=device-width,
-initial-scale=1.0&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;title&gt;Drishti
-Sharma Portfolio&lt;/title&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;link
-rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">&lt;/head&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">&lt;body&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;header&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;h1&gt;Drishti
-Sharma - Business Analyst &amp; Software Developer&lt;/h1&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;p&gt;Email:
-drishti2996@gmail.com | Phone: +1 (343) 580 5170&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;/header&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+<body class="background-poc"background="{% static "images/background_image_1.jpeg" %}">
+  <header class="bg-dark text-white text-center py-3 banner-poc" style="background-image:url('{% static "images/background_image_1.jpeg" %}');">
+  <!--  <img src="https://png.pngtree.com/background/20210711/original/pngtree-summer-refrigerated-air-conditioning-banner-background-picture-image_1074420.jpg" alt="Integrity refrigeration" class="img-fluid"> -->
+    <h1 class="big-bold-heading">Integrity Refrigeration</h1>
+  </header>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;h2&gt;About
-Me&lt;/h2&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;p&gt;Experienced
-Business Analyst and Software Developer with expertise in gathering
-requirements, designing solutions, and managing technical projects in
-healthcare and finance.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;/section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+  <div class="container mt-5">
+  <h2 style="font-size: 36px;font-weight: bold;" "font-weight:="" bold;"="">Create New Product</h2>
+    <form method="POST">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="name" class="form-label">Name:</label>
+        <input type="text" name="name" id="name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description:</label>
+        <textarea name="description" id="description" class="form-control" required></textarea>
+      </div>
+          
+        <div class="mb-3">
+        <label for="fridge_id" class="form-label">Fridge ID:</label>
+        <input type="text" name="fridge_id" id="fridge_id" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="model_number"  
+ class="form-label">Model Number:</label>
+        <input type="text" name="model_number" id="model_number" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="serial_number"  
+ class="form-label">Serial Number:</label>
+        <input type="text" name="serial_number" id="serial_number" class="form-control">  
+      </div>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;h2&gt;Skills&lt;/h2&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;ul&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">      &lt;li&gt;Business
-Process Modeling&lt;/li&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">     
-&lt;li&gt;Stakeholder Management&lt;/li&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">      &lt;li&gt;Agile,
-JIRA, Confluence&lt;/li&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">      &lt;li&gt;Data
-Analysis (Excel, SQL)&lt;/li&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/ul&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;/section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
+ <div class="mb-3">
+        <label for="purchase_date"  
+ class="form-label">Purchase date:</label>
+        <input type="date" name="purchase_date" id="purchase_date" class="form-control">  
+      </div>
+     
+      <div class="mb-3">
+        <label for="installation_date"  
+ class="form-label">Installation Date:</label>
+        <input type="date" name="installation_date" id="installation_date" class="form-control">  
+      </div>
+     
+      <div class="mb-3">
+        <label for="warranty_expiry_date"  
+ class="form-label">Waranty Expiry Date:</label>
+        <input type="date" name="warranty_expiry_date" id="warranty_expiry_date" class="form-control">  
+      </div>
+     
+      <div class="mb-3">
+        <label for="location"  
+ class="form-label">Location:</label>
+        <input type="text" name="location" id="location" class="form-control">  
+      </div>
+      
+      <button type="submit" class="btn btn-primary btn-lg">Create Product</button>
+    </form>
+  </div>
+  
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> 
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">   
-&lt;h2&gt;Projects&lt;/h2&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">      &lt;h3&gt;Medical
-Chatbot (Queen’s University)&lt;/h3&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">      &lt;p&gt;Developed
-a chatbot for healthcare using React, Flask, and MongoDB.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">      &lt;h3&gt;Wealth
-and Insurance Application (HSBC)&lt;/h3&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">      &lt;p&gt;Launched
-a financial app increasing revenue by 60% for HSBC.&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;/div&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;/section&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm"><br/>
 
-</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;footer&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">    &lt;p&gt;Connect
-with me on &lt;a
-href=&quot;https://linkedin.com/in/drishti-sharma-299608&quot;&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">  &lt;/footer&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">&lt;/body&gt;</p>
-<p style="line-height: 100%; margin-bottom: 0cm">&lt;/html&gt;</p>
 </body>
 </html>
